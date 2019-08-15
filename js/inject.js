@@ -1,20 +1,20 @@
 function buildDirectory() {
 	let attr = [];
 	let desc = [];
-	let apis = $('#wikiArticle >:header');
-	let len = apis.length;
+	let headers = $('#wikiArticle >:header');
+	let len = headers.length;
 	let html = '<ul style="list-style:none;margin-left:15px;">'
 	for (let ele = 0; ele < len; ele++) {
-		let current_id = apis[ele].getAttribute('id');
-		let current = apis[ele].innerText;
+		let current_id = headers[ele].getAttribute('id');
+		let current = headers[ele].innerText;
 		if (!current_id) {
 			continue;
 		}
 
 		// let h4sibling = '';
-		// if (apis[ele].nextElementSibling.nextElementSibling) {
-		// 	if (apis[ele].nextElementSibling.nextElementSibling.firstElementChild) {
-		// 		h4sibling = apis[ele].nextElementSibling.nextElementSibling.firstElementChild.innerText;
+		// if (headers[ele].nextElementSibling.nextElementSibling) {
+		// 	if (headers[ele].nextElementSibling.nextElementSibling.firstElementChild) {
+		// 		h4sibling = headers[ele].nextElementSibling.nextElementSibling.firstElementChild.innerText;
 		// 		console.log(h4sibling);
 		// 	}
 		// }
@@ -23,7 +23,7 @@ function buildDirectory() {
 		// 	desc[current_id] = h4sibling;
 		// }
 		// current = current.anchor(current_id);
-		apis[ele].innerHTML = current;
+		headers[ele].innerHTML = current;
 		attr.push(current_id);
 	}
 
