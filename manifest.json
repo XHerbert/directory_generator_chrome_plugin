@@ -1,19 +1,19 @@
 {
 	"manifest_version": 2,
-	"name": "Bimface API",
+	"name": "Document directory generator",
 	"version": "1.0.0",
 	"description": "__MSG_pluginDesc__",
 	"icons": {
-		"16": "img/favicon.png",
-		"48": "img/favicon.png",
-		"128": "img/favicon.png"
+		"16": "img/favicon.moz.png",
+		"48": "img/favicon.moz.png",
+		"128": "img/favicon.moz.png"
 	},
 	"background": {
 		"page": "background.html"
 	},
 	"browser_action": {
-		"default_icon": "img/favicon.png",
-		"default_title": "Bimface API 插件",
+		"default_icon": "img/favicon.moz.png",
+		"default_title": "文档大纲生成插件",
 		"default_popup": "popup.html"
 	},
 	"content_scripts": [
