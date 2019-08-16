@@ -1,4 +1,3 @@
-
 $('#open').click(() => {
 	sendMessageToContentScript({cmd:'block'}, function(response){});
 });
@@ -6,9 +5,6 @@ $('#open').click(() => {
 $('#close').click(() => {
 	sendMessageToContentScript({cmd:'none'}, function(response){});
 });
-
-
-
 function sendMessageToContentScript(message, callback)
 {
 	getCurrentTabId((tabId) =>
@@ -18,8 +14,7 @@ function sendMessageToContentScript(message, callback)
 			if(callback) callback(response);
 		});
 	});
-}
-
+};
 function getCurrentTabId(callback)
 {
 	chrome.tabs.query({active: true, currentWindow: true}, function(tabs)
