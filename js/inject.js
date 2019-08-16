@@ -74,7 +74,6 @@ function getUUID() {
 		let currentTitle = document.title;
 		if (title !== currentTitle) {
 			title = currentTitle;
-			console.log(currentTitle);
 			buildDirectory();
 		}
 	}, 500);
